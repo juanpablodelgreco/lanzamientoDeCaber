@@ -41,7 +41,7 @@ public class Torneo {
 
 	public void cargarLanzadores() {
 		try {
-			Scanner sc = new Scanner(new File("./lote_pruebas/Input/"+path+".in"));
+			Scanner sc = new Scanner(new File("./lote_pruebas/Input/" + path + ".in"));
 			Lanzador lanzador;
 			Lanzamiento lanzamiento;
 			double distancia = 0;
@@ -54,8 +54,8 @@ public class Torneo {
 				distanciaTotal = 0;
 				consistencia = 0;
 				for (int j = 0; j < 3; j++) {
-					distancia = sc.nextDouble();
-					grados = sc.nextDouble();
+					distancia = Double.parseDouble(sc.next());
+					grados = Double.parseDouble(sc.next());
 					lanzamiento = new Lanzamiento(grados, distancia);
 					distanciaTotal += lanzamiento.obtenerDistanciaValida();
 					if (lanzamiento.isDescalificado()) {
@@ -68,7 +68,7 @@ public class Torneo {
 				lanzadores.add(lanzador);
 			}
 			sc.close();
-			System.out.println(path+".out "+ " generado con exito!");
+			System.out.println(path + ".out " + " generado con exito!");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -76,7 +76,7 @@ public class Torneo {
 
 	public void grabarResultados() {
 		try {
-			PrintWriter pw = new PrintWriter(new File("./lote_pruebas/Recibido/"+path+".out"));
+			PrintWriter pw = new PrintWriter(new File("./lote_pruebas/Recibido/" + path + ".out"));
 			for (Lanzador l : podioC)
 				pw.print(l.getId() + " ");
 			pw.println();

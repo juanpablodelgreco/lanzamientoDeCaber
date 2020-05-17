@@ -1,14 +1,14 @@
 package caber;
+
 import java.util.Comparator;
 
-public class Lanzador implements Comparable<Lanzador>{
+public class Lanzador implements Comparable<Lanzador> {
 	private int id;
 	private double distTotalRecorrida;
 	private double consistencia;
 	private boolean descalificado;
 
-
-	public Lanzador(int id,double distTotalRecorrida, double consistencia, boolean descalificado) {
+	public Lanzador(int id, double distTotalRecorrida, double consistencia, boolean descalificado) {
 		this.id = id;
 		this.distTotalRecorrida = distTotalRecorrida;
 		this.consistencia = consistencia;
@@ -22,11 +22,11 @@ public class Lanzador implements Comparable<Lanzador>{
 	public double getDistTotalRecorrida() {
 		return distTotalRecorrida;
 	}
-	
+
 	public double getConsistencia() {
 		return consistencia;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -39,11 +39,11 @@ public class Lanzador implements Comparable<Lanzador>{
 
 	@Override
 	public int compareTo(Lanzador obj) {
-		return (int)obj.distTotalRecorrida - (int)this.distTotalRecorrida;
+		return (int) obj.distTotalRecorrida - (int) this.distTotalRecorrida;
 	}
-	
+
 	public static class Comparators {
-		
+
 		public static Comparator<Lanzador> CONSISTENCIA = new Comparator<Lanzador>() {
 			@Override
 			public int compare(Lanzador l1, Lanzador l2) {
