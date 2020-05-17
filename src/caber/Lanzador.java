@@ -28,4 +28,9 @@ public class Lanzador {
 		return 0;
 	}
 
+	@Override
+	public String toString() {
+		return "Lanzador [distTotalRecorrida=" + distTotalRecorrida
+				+ ", consistencia=" + consistencia + ", descalificado=" + descalificado + "]";
+	}
 }

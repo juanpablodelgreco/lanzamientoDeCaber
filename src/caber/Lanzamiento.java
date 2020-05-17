@@ -12,10 +12,17 @@ public class Lanzamiento {
 	}
 
 	public double obtenerDistanciaValida() {
-		return 1;
+		if (angulo >= -30 && angulo <= 30)
+			return distancia;
+		else if (angulo < 90 && angulo > -90)
+				return distancia * 0.8;
+			else return 0;
 	}
 
 	public boolean isDescalificado() {
-		return this.descalificado;
+		if(angulo>90 || angulo<-90)
+			return true;
+		else return false;
 	}
+	
 }
