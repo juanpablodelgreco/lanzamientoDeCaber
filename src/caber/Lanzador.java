@@ -1,8 +1,5 @@
 package caber;
-
-import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
 
 public class Lanzador implements Comparable<Lanzador>{
 	private int id;
@@ -12,7 +9,6 @@ public class Lanzador implements Comparable<Lanzador>{
 
 
 	public Lanzador(int id,double distTotalRecorrida, double consistencia, boolean descalificado) {
-		//lanzamientos = new ArrayList<Lanzamiento>();
 		this.id = id;
 		this.distTotalRecorrida = distTotalRecorrida;
 		this.consistencia = consistencia;
@@ -21,10 +17,6 @@ public class Lanzador implements Comparable<Lanzador>{
 
 	public boolean getDescalificado() {
 		return this.descalificado;
-	}
-
-	public int compareConsistencia(Lanzador l) {
-		return (int)this.consistencia - (int)l.consistencia;
 	}
 
 	public double getDistTotalRecorrida() {
