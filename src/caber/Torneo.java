@@ -13,15 +13,13 @@ public class Torneo {
 	private List<Lanzador> lanzadores;
 	private List<Lanzador> podioD;
 	private List<Lanzador> podioC;
-	private String inputPath;
-	private String outputPath;
+	private String path;
 
-	public Torneo(String inputPath, String outputPath) {
+	public Torneo(String path) {
 		lanzadores = new ArrayList<Lanzador>();
 		podioD = new ArrayList<Lanzador>();
 		podioC = new ArrayList<Lanzador>();
-		this.inputPath = inputPath;
-		this.outputPath = outputPath;
+		this.path = path;
 	}
 
 	public void jugarTorneo() {
@@ -43,7 +41,7 @@ public class Torneo {
 
 	public void cargarLanzadores() {
 		try {
-			Scanner sc = new Scanner(new File(inputPath));
+			Scanner sc = new Scanner(new File("./lote_pruebas/Input/"+path+".in"));
 			Lanzador lanzador;
 			Lanzamiento lanzamiento;
 			double distancia = 0;
@@ -70,7 +68,7 @@ public class Torneo {
 				lanzadores.add(lanzador);
 			}
 			sc.close();
-			System.out.println(outputPath+ " generado con exito!");
+			System.out.println(path+".out "+ " generado con exito!");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -78,7 +76,7 @@ public class Torneo {
 
 	public void grabarResultados() {
 		try {
-			PrintWriter pw = new PrintWriter(new File(outputPath));
+			PrintWriter pw = new PrintWriter(new File("./lote_pruebas/Recibido/"+path+".out"));
 			for (Lanzador l : podioC)
 				pw.print(l.getId() + " ");
 			pw.println();
