@@ -54,7 +54,8 @@ public class TestsCaber {
 
 		Scanner recibido = new Scanner(new File("./lote_pruebas/Recibido/entrada3.out"));
 		String rec = recibido.useDelimiter("\\A").next();
-
+		System.out.println(rec);
+		System.out.println(esp);
 		Assert.assertEquals(esp, rec);
 
 		esperado.close();
