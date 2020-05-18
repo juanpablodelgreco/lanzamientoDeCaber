@@ -31,7 +31,7 @@ public class Torneo {
 		}
 		Collections.sort(lanzadores, Lanzador.Comparators.CONSISTENCIA);
 		i = 0;
-		while (podioC.size() <= 3 && i < lanzadores.size()) {
+		while (podioC.size() < 3 && i < lanzadores.size()) {
 			if (!lanzadores.get(i).getDescalificado())
 				podioC.add(lanzadores.get(i));
 			i++;
