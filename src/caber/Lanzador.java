@@ -30,13 +30,7 @@ public class Lanzador implements Comparable<Lanzador> {
 	public int getId() {
 		return id;
 	}
-
-	@Override
-	public String toString() {
-		return "Lanzador [id=" + id + ", distTotalRecorrida=" + distTotalRecorrida + ", consistencia=" + consistencia
-				+ ", descalificado=" + descalificado + "]";
-	}
-
+	
 	@Override
 	public int compareTo(Lanzador obj) {
 		if(this.distTotalRecorrida < obj.distTotalRecorrida)

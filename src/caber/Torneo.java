@@ -30,8 +30,6 @@ public class Torneo {
 			if(lanzadores.get(i).getDistTotalRecorrida() != 0)
 			podioD.add(lanzadores.get(i));
 		}
-		for(Lanzador l:podioD)
-			
 		Collections.sort(lanzadores, Lanzador.Comparators.CONSISTENCIA);
 		i = 0;
 		while (podioC.size() < 3 && i < lanzadores.size()) {
