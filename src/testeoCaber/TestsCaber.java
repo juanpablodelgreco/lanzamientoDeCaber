@@ -117,6 +117,10 @@ public class TestsCaber {
 
 		Scanner recibido = new Scanner(new File("./lote_pruebas/Recibido/casoFatiga.out"));
 		String rec = recibido.useDelimiter("\\A").next();
+		Assert.assertEquals(esp, rec);
+
+		esperado.close();
+		recibido.close();
 	}
 	
 	public void generadorCasoFatiga() {
