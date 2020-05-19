@@ -30,18 +30,19 @@ public class Lanzador implements Comparable<Lanzador> {
 	public int getId() {
 		return id;
 	}
-	
+
 	@Override
 	public int compareTo(Lanzador obj) {
-		if(this.distTotalRecorrida < obj.distTotalRecorrida)
+		if (this.distTotalRecorrida < obj.distTotalRecorrida)
 			return 1;
-		else if(this.distTotalRecorrida == obj.distTotalRecorrida)
+		else if (this.distTotalRecorrida == obj.distTotalRecorrida)
 			return 0;
-		else return -1;
+		else
+			return -1;
 	}
 
 	public static class Comparators {
-		
+
 		public static Comparator<Lanzador> CONSISTENCIA = new Comparator<Lanzador>() {
 			@Override
 			public int compare(Lanzador l1, Lanzador l2) {

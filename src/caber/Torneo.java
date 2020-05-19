@@ -26,9 +26,9 @@ public class Torneo {
 		int i;
 		cargarLanzadores();
 		Collections.sort(lanzadores);
-		for (i = 0; i < 3 && i<lanzadores.size(); i++) {
-			if(lanzadores.get(i).getDistTotalRecorrida() != 0)
-			podioD.add(lanzadores.get(i));
+		for (i = 0; i < 3 && i < lanzadores.size(); i++) {
+			if (lanzadores.get(i).getDistTotalRecorrida() != 0)
+				podioD.add(lanzadores.get(i));
 		}
 		Collections.sort(lanzadores, Lanzador.Comparators.CONSISTENCIA);
 		i = 0;
@@ -78,15 +78,17 @@ public class Torneo {
 	public void grabarResultados() {
 		try {
 			PrintWriter pw = new PrintWriter(new File("./lote_pruebas/Recibido/" + path + ".out"));
-			if(podioC.size() != 0) {
-			for (Lanzador l : podioC)
-				pw.print(l.getId() + " ");
-			}else pw.print("No hubo ganadores en constancia");
+			if (podioC.size() != 0) {
+				for (Lanzador l : podioC)
+					pw.print(l.getId() + " ");
+			} else
+				pw.print("No hubo ganadores en constancia");
 			pw.println();
-			if(podioD.size() != 0) {
-			for (Lanzador l : podioD)
-				pw.print(l.getId() + " ");
-			}else pw.print("No hubo ganadores en distancia");
+			if (podioD.size() != 0) {
+				for (Lanzador l : podioD)
+					pw.print(l.getId() + " ");
+			} else
+				pw.print("No hubo ganadores en distancia");
 			pw.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
