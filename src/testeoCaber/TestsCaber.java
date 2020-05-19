@@ -104,4 +104,44 @@ public class TestsCaber {
 		recibido.close();
 
 	}
+
+	@Test
+	public void testPodioEmpate() throws FileNotFoundException {
+		// Demuestra que el programa muestre correctamente los ganadores si hay empate
+		// entre los primeros puestos.
+		Torneo t = new Torneo("podioEmpate");
+		t.jugarTorneo();
+
+		Scanner esperado = new Scanner(new File("./lote_pruebas/Esperado/podioEmpate.out"));
+		String esp = esperado.useDelimiter("\\A").next();
+
+		Scanner recibido = new Scanner(new File("./lote_pruebas/Recibido/podioEmpate.out"));
+		String rec = recibido.useDelimiter("\\A").next();
+
+		Assert.assertEquals(esp, rec);
+
+		esperado.close();
+		recibido.close();
+
+	}
+
+	@Test
+	public void testDistanciaValida() throws FileNotFoundException {
+		// Demuestra que el programa muestre correctamente cuando hay un ganador en
+		// distancia pero no hay ganadores en consistencia porque están descalificados.
+		Torneo t = new Torneo("distanciaValida");
+		t.jugarTorneo();
+
+		Scanner esperado = new Scanner(new File("./lote_pruebas/Esperado/distanciaValida.out"));
+		String esp = esperado.useDelimiter("\\A").next();
+
+		Scanner recibido = new Scanner(new File("./lote_pruebas/Recibido/distanciaValida.out"));
+		String rec = recibido.useDelimiter("\\A").next();
+
+		Assert.assertEquals(esp, rec);
+
+		esperado.close();
+		recibido.close();
+
+	}
 }
