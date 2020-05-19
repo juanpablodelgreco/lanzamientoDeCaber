@@ -91,7 +91,7 @@ public class TestsCaber {
 	public void testUnGanadorUnDescalificado() throws FileNotFoundException {
 		// Demuestra que el programa muestre correctamente cuando hay un ganador en
 		// distancia pero no hay ganadores en consistencia porque están descalificados.
-		Torneo t = new Torneo("unGanadorUnDescalificado");
+		Torneo t = new Torneo("unGanadorDosDescalificados");
 		t.jugarTorneo();
 
 		Scanner esperado = new Scanner(new File("./lote_pruebas/Esperado/unGanadorDosDescalificados.out"));
