@@ -46,7 +46,9 @@ public class Lanzador implements Comparable<Lanzador> {
 		public static Comparator<Lanzador> CONSISTENCIA = new Comparator<Lanzador>() {
 			@Override
 			public int compare(Lanzador l1, Lanzador l2) {
-				return (int) (l1.getConsistencia() - l2.getConsistencia());
+					if(l1.getConsistencia() > l2.getConsistencia())
+						return 1;
+					else return -1;
 			}
 		};
 	}

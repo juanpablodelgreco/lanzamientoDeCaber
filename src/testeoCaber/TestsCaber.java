@@ -2,6 +2,8 @@ package testeoCaber;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -92,16 +94,48 @@ public class TestsCaber {
 		Torneo t = new Torneo("unGanadorUnDescalificado");
 		t.jugarTorneo();
 
-		Scanner esperado = new Scanner(new File("./lote_pruebas/Esperado/unGanadorUnDescalificado.out"));
+		Scanner esperado = new Scanner(new File("./lote_pruebas/Esperado/unGanadorDosDescalificados.out"));
 		String esp = esperado.useDelimiter("\\A").next();
 
-		Scanner recibido = new Scanner(new File("./lote_pruebas/Recibido/unGanadorUnDescalificado.out"));
+		Scanner recibido = new Scanner(new File("./lote_pruebas/Recibido/unGanadorDosDescalificados.out"));
 		String rec = recibido.useDelimiter("\\A").next();
 
 		Assert.assertEquals(esp, rec);
 
 		esperado.close();
 		recibido.close();
+
+	}
+	
+	@Test
+	public void testCasoFatiga() throws FileNotFoundException {
+		//generadorCasoFatiga();
+		Torneo t = new Torneo("casoFatiga");
+		t.jugarTorneo();
+		Scanner esperado = new Scanner(new File("./lote_pruebas/Esperado/casoFatiga.out"));
+		String esp = esperado.useDelimiter("\\A").next();
+
+		Scanner recibido = new Scanner(new File("./lote_pruebas/Recibido/casoFatiga.out"));
+		String rec = recibido.useDelimiter("\\A").next();
+	}
+	
+	public void generadorCasoFatiga() {
+		try {
+			PrintWriter pw = new PrintWriter(new File("./lote_pruebas/Input/casoFatiga.in"));
+			pw.println(100000);
+			double distancia, angulo;
+			for (int i = 0; i < 100000; i++) {
+				for (int j = 0; j < 3; j++) {
+					distancia = (double) (Math.random() * 3) + 1;
+					angulo = (double) (Math.random() * 100) + 1;
+					pw.println(distancia + " " + angulo);
+				}
+
+			}
+			pw.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 
 	}
 }
