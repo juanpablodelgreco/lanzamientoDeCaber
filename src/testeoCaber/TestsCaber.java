@@ -88,7 +88,7 @@ public class TestsCaber {
 	}
 
 	@Test
-	public void testUnGanadorUnDescalificado() throws FileNotFoundException {
+	public void testUnGanadorDosDescalificado() throws FileNotFoundException {
 		// Demuestra que el programa muestre correctamente cuando hay un ganador en
 		// distancia pero no hay ganadores en consistencia porque están descalificados.
 		Torneo t = new Torneo("unGanadorDosDescalificados");
