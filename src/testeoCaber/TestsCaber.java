@@ -1,9 +1,12 @@
-package caber;
+package testeoCaber;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import org.junit.Assert;
 import org.junit.Test;
+
+import caber.Torneo;
+
 import java.util.Scanner;
 
 public class TestsCaber {
