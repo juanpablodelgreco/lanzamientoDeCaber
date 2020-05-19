@@ -146,20 +146,12 @@ public class TestsCaber {
 		recibido.close();
 
 	}
-	//Demuestra que el algoritmo responde correctamente cuando hay un maximo de competidores
+	//Demuestra que el algoritmo responde correctamente cuando hay una gran cantidad de competidores
 	@Test
 	public void testCasoFatiga() throws FileNotFoundException {
+		generadorCasoFatiga();
 		Torneo t = new Torneo("casoFatiga");
 		t.jugarTorneo();
-		Scanner esperado = new Scanner(new File("./lote_pruebas/Esperado/casoFatiga.out"));
-		String esp = esperado.useDelimiter("\\A").next();
-
-		Scanner recibido = new Scanner(new File("./lote_pruebas/Recibido/casoFatiga.out"));
-		String rec = recibido.useDelimiter("\\A").next();
-		Assert.assertEquals(esp, rec);
-
-		esperado.close();
-		recibido.close();
 	}
 	
 	public void generadorCasoFatiga() {

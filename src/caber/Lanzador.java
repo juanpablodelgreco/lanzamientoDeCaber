@@ -48,6 +48,7 @@ public class Lanzador implements Comparable<Lanzador> {
 			public int compare(Lanzador l1, Lanzador l2) {
 					if(l1.getConsistencia() > l2.getConsistencia())
 						return 1;
+					else if(l1.getConsistencia() == l2.getConsistencia()) return 0;
 					else return -1;
 			}
 		};
