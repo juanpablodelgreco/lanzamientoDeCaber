@@ -21,7 +21,7 @@ La primera línea, con un número natural que representa la cantidad de lanzador
 Luego, n grupos de pares de reales del tipo (d, a), que representan la distancia en metros a la que se lanzó el caber, y el ángulo de aterrizaje (considerando 0° las 12 horas). Los datos tendrán precisión suficiente para evitar empates.
 El archivo de salida estará formado por dos líneas con los números de los participantes que han ganado en constancia y distancia, en ese orden, separados por espacios entre sí. El podio debe resolverse en un tiempo aceptable, dado que los lanzadores estarán expectantes del resultado del mismo.
 
-# Archivos de ejemplo
+### Archivos de ejemplo
 ```
 archivo.in
 
