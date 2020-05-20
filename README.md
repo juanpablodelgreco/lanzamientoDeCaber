@@ -22,9 +22,8 @@ Luego, n grupos de pares de reales del tipo (d, a), que representan la distancia
 El archivo de salida estará formado por dos líneas con los números de los participantes que han ganado en constancia y distancia, en ese orden, separados por espacios entre sí. El podio debe resolverse en un tiempo aceptable, dado que los lanzadores estarán expectantes del resultado del mismo.
 
 ### Examples:
-```
 archivo.in
-
+```
 3
 1.49	5.00
 1.50	3.00
@@ -36,9 +35,8 @@ archivo.in
 1.30	-92.00
 1.00	1.00
 ```
-```
 archivo.out
-
+```
 1 2
 2 1 3
 ```
