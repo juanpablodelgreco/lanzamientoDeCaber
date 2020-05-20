@@ -1,3 +1,4 @@
+# Lanzamiento de cáber
 El lanzamiento de cáber es una disciplina escocesa de larga data. En rasgos generales, consta del lanzamiento de un pesado tronco que debe hacer un giro vertical en el aire.
 
 La Asociación de Escoceses de Ramos Mejía (AERM) desea instalar nuevamente esta competición en la población, para lo cual armará un evento con competidores de jadrín de infantes. El mismo se evaluará de la siguiente manera:
@@ -20,8 +21,8 @@ La primera línea, con un número natural que representa la cantidad de lanzador
 Luego, n grupos de pares de reales del tipo (d, a), que representan la distancia en metros a la que se lanzó el caber, y el ángulo de aterrizaje (considerando 0° las 12 horas). Los datos tendrán precisión suficiente para evitar empates.
 El archivo de salida estará formado por dos líneas con los números de los participantes que han ganado en constancia y distancia, en ese orden, separados por espacios entre sí. El podio debe resolverse en un tiempo aceptable, dado que los lanzadores estarán expectantes del resultado del mismo.
 
-Archivos de ejemplo
-
+# Archivos de ejemplo
+```
 archivo.in
 
 3
@@ -34,8 +35,10 @@ archivo.in
 2.30	-35.00
 1.30	-92.00
 1.00	1.00
-
+```
+```
 archivo.out
 
 1 2
 2 1 3
+```
